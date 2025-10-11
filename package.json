@@ -7,6 +7,8 @@
   "type": "module",
   "main": "src/main.js",
   "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js -i"
   },
   "jest": {

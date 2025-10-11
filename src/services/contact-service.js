@@ -84,7 +84,8 @@ const update = async (userId, contactId, request) => {
 };
 
 const deleteContact = async (userId, contactId) => {
-  cotactId = validate(getContactValidation, contactId);
+  // validasi
+  contactId = validate(getContactValidation, contactId);
 
   // cek contact ada atau tidak
   const contact = await Contact.findOne({

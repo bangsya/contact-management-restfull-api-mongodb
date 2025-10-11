@@ -42,7 +42,9 @@ const update = async (req, res, next) => {
 
 const deleteContact = async (req, res, next) => {
   try {
-    await contactService.deleteContact(req.user._id, req.params.id);
+    const userId = req.user._id;
+    const contactId = req.params.id;
+    await contactService.deleteContact(userId, contactId);
     res.status(200).json({
       data: "Contact deleted successfully",
     });

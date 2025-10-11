@@ -36,7 +36,7 @@ describe("POST /api/contacts", function () {
       .send({
         firstName: "test contact",
         lastName: "test",
-        email: "test@example.com",
+        email: "test@pzn.com",
         phone: "081234567890",
       });
 
@@ -44,7 +44,7 @@ describe("POST /api/contacts", function () {
     expect(result.status).toBe(201);
     expect(result.body.data.firstName).toBe("test contact");
     expect(result.body.data.lastName).toBe("test");
-    expect(result.body.data.email).toBe("test@example.com");
+    expect(result.body.data.email).toBe("test@pzn.com");
     expect(result.body.data.phone).toBe("081234567890");
     expect(result.body.data.createdAt).toBeDefined();
     expect(result.body.data.updatedAt).toBeDefined();

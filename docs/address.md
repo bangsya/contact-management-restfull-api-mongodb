@@ -12,6 +12,7 @@ Request Body :
 
 ```json
 {
+  "label": "home",
   "street": "Jalan apa",
   "city": "Kota apa",
   "province": "Provinsi apa",

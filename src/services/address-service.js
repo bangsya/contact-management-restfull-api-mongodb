@@ -1,4 +1,4 @@
-import ResponseError from "../error/response-error";
+import ResponseError from "../error/response-error.js";
 import Contact from "../models/contact-models.js";
 import {
   createAddressValidation,
