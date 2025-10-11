@@ -2,6 +2,7 @@ import express from "express";
 import { authMiddleware } from "../middleware/auth-middleware.js";
 import userController from "../controller/user-controller.js";
 import contactController from "../controller/contact-controller.js";
+import addressController from "../controller/address-controller.js";
 
 const userRouter = express.Router();
 userRouter.use(authMiddleware);
@@ -17,5 +18,21 @@ userRouter.get("/api/contacts/:id", contactController.get);
 userRouter.put("/api/contacts/:id", contactController.update);
 userRouter.delete("/api/contacts/:id", contactController.deleteContact);
 userRouter.get("/api/contacts", contactController.search);
+
+// address API
+userRouter.post("/api/contacts/:contactId/addresses", addressController.create);
+userRouter.get(
+  "/api/contacts/:contactId/addresses/:addressId",
+  addressController.get
+);
+userRouter.put(
+  "/api/contacts/:contactId/addresses/:addressId",
+  addressController.update
+);
+userRouter.delete(
+  "/api/contacts/:contactId/addresses/:addressId",
+  addressController.remove
+);
+userRouter.get("/api/contacts/:contactId/addresses", addressController.list);
 
 export { userRouter };

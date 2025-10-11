@@ -8,7 +8,6 @@ import {
   createTestUser,
 } from "./test.utils.js";
 import { logger } from "../src/application/logging.js";
-import User from "../src/models/user-models.js";
 
 describe("POST /api/users", function () {
   beforeAll(async () => {

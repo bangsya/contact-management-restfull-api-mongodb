@@ -1,4 +1,37 @@
-import { model, Schema } from "mongoose";
+import mongoose, { model, Schema } from "mongoose";
+
+const addressSchema = new Schema({
+  label: {
+    type: String,
+    required: true,
+    max: 100,
+  },
+  street: {
+    type: String,
+    optional: true,
+    max: 250,
+  },
+  city: {
+    type: String,
+    optional: true,
+    max: 100,
+  },
+  province: {
+    type: String,
+    optional: true,
+    max: 100,
+  },
+  country: {
+    type: String,
+    required: true,
+    max: 100,
+  },
+  postalCode: {
+    type: String,
+    optional: true,
+    max: 100,
+  },
+});
 
 const contactModel = new Schema({
   userId: {
@@ -34,11 +67,7 @@ const contactModel = new Schema({
     type: Date,
     default: Date.now,
   },
-  address: {
-    type: Object,
-    optional: true,
-    max: 200,
-  },
+  addresses: [addressSchema],
 });
 
 const Contact = model("Contact", contactModel);

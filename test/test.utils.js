@@ -64,6 +64,50 @@ const createTestContactMany = async () => {
   }
 };
 
+const deleteAllAddressTest = async () => {
+  await Contact.updateMany({}, { $set: { addresses: [] } });
+};
+
+const createTestAddress = async () => {
+  const testContact = await getTestContact();
+  await Contact.updateOne(
+    { _id: testContact._id },
+    {
+      $push: {
+        addresses: {
+          label: "test",
+          street: "Jalan Test",
+          city: "Kota Test",
+          province: "Provinsi Test",
+          country: "Negara Test",
+          postalCode: "12345",
+        },
+      },
+    }
+  );
+};
+
+const createTestAddressMany = async () => {
+  const testContact = await getTestContact();
+  for (let i = 1; i < 4; i++) {
+    await Contact.updateOne(
+      { _id: testContact._id },
+      {
+        $push: {
+          addresses: {
+            label: `test ${i}`,
+            street: `Jalan Test ${i}`,
+            city: `Kota Test ${i}`,
+            province: `Provinsi Test ${i}`,
+            country: `Negara Test ${i}`,
+            postalCode: `12345${i}`,
+          },
+        },
+      }
+    );
+  }
+};
+
 export {
   connectDBTest,
   closeDBTest,
@@ -73,4 +117,7 @@ export {
   createTestContact,
   getTestContact,
   createTestContactMany,
+  deleteAllAddressTest,
+  createTestAddress,
+  createTestAddressMany,
 };

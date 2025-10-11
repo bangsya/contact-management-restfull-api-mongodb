@@ -121,8 +121,6 @@ Response Body Error :
 }
 ```
 
-yang search masih perlu di pelajari ya guys ya
-
 ## Search Contact API
 
 Endpoint : GET /api/contacts
@@ -145,18 +143,22 @@ Response Body Success :
 {
   "data": [
     {
-      "id": 1,
+      "_id": "unique-id-1",
       "firstName": "Eko",
       "lastName": "Khannedy",
       "email": "eko@pzn.com",
-      "phone": "32423423434"
+      "phone": "32423423434",
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z"
     },
     {
-      "id": 2,
+      "_id": "unique-id-2",
       "firstName": "Eko",
       "lastName": "Khannedy",
       "email": "eko@pzn.com",
-      "phone": "32423423434"
+      "phone": "32423423434",
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z"
     }
   ],
   "paging": {
