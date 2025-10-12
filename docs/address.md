@@ -48,7 +48,7 @@ Response Body Error :
 
 ## Update Address API
 
-Endpoint : PUT /api/contacts/:contactId/addresses/:addressId
+Endpoint : PATCH /api/contacts/:contactId/addresses/:addressId
 
 Headers :
 
