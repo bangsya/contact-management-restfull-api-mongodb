@@ -144,18 +144,18 @@ Response Body Success :
   "data": [
     {
       "_id": "unique-id-1",
-      "firstName": "Eko",
-      "lastName": "Khannedy",
-      "email": "eko@pzn.com",
+      "firstName": "Bangsya",
+      "lastName": "Code",
+      "email": "bangsya@pzn.com",
       "phone": "32423423434",
       "createdAt": "2023-01-01T00:00:00.000Z",
       "updatedAt": "2023-01-01T00:00:00.000Z"
     },
     {
       "_id": "unique-id-2",
-      "firstName": "Eko",
-      "lastName": "Khannedy",
-      "email": "eko@pzn.com",
+      "firstName": "bangsya2",
+      "lastName": "code",
+      "email": "bangsya2@pzn.com",
       "phone": "32423423434",
       "createdAt": "2023-01-01T00:00:00.000Z",
       "updatedAt": "2023-01-01T00:00:00.000Z"
