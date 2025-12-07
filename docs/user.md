@@ -67,7 +67,7 @@ Response Body Error :
 
 ## Update User API
 
-Endpoint : PUT /api/users/current
+Endpoint : PATCH /api/users/current
 
 Request Header :
 

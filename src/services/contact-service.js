@@ -120,10 +120,10 @@ const search = async (userId, request) => {
     ];
   }
   if (searchContact.email) {
-    filter.$or = [{ email: { $regex: searchContact.email, $options: "i" } }];
+    filter.$and = [{ email: { $regex: searchContact.email, $options: "i" } }];
   }
   if (searchContact.phone) {
-    filter.$or = [{ phone: { $regex: searchContact.phone, $options: "i" } }];
+    filter.$and = [{ phone: { $regex: searchContact.phone, $options: "i" } }];
   }
   const totalItems = await Contact.countDocuments(filter);
   const contacts = await Contact.find(filter)

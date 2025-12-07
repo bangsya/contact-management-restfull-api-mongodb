@@ -27,6 +27,7 @@ const create = async (userId, contactId, request) => {
   await Contact.findByIdAndUpdate(
     contactId,
     {
+      updatedAt: new Date(),
       $push: {
         addresses: address,
       },
@@ -75,6 +76,7 @@ const update = async (userId, contactId, addressId, request) => {
       addresses: { $elemMatch: { _id: addressId } },
     },
     {
+      updatedAt: new Date(),
       $set: {
         "addresses.$.label": address.label,
         "addresses.$.street": address.street,
@@ -115,6 +117,7 @@ const remove = async (userId, contactId, addressId) => {
   await Contact.findByIdAndUpdate(
     { userId, _id: contactId, addresses: { $elemMatch: { _id: addressId } } },
     {
+      updatedAt: new Date(),
       $pull: {
         addresses: { _id: addressId },
       },

@@ -48,7 +48,7 @@ Response Body Error :
 
 ## Update Address API
 
-Endpoint : PATCH /api/contacts/:contactId/addresses/:addressId
+Endpoint : PUT /api/contacts/:contactId/addresses/:addressId
 
 Headers :
 
@@ -63,7 +63,7 @@ Request Body :
   "city": "Kota apa",
   "province": "Provinsi apa",
   "country": "Negara apa",
-  "postal_code": "Kode pos"
+  "postalCode": "Kode pos"
 }
 ```
 
@@ -73,13 +73,13 @@ Response Body Success :
 {
   "message": "Address updated successfully",
   "data": {
-    "id": 1,
+    "_id": 1,
     "label": "home",
     "street": "Jalan apa",
     "city": "Kota apa",
     "province": "Provinsi apa",
     "country": "Negara apa",
-    "postal_code": "Kode pos"
+    "postalCode": "Kode pos"
   }
 }
 ```
@@ -105,12 +105,12 @@ Response Body Success :
 ```json
 {
   "data": {
-    "id": 1,
+    "_id": 1,
     "street": "Jalan apa",
     "city": "Kota apa",
     "province": "Provinsi apa",
     "country": "Negara apa",
-    "postal_code": "Kode pos"
+    "postalCode": "Kode pos"
   }
 }
 ```
@@ -137,22 +137,22 @@ Response Body Success :
 {
   "data": [
     {
-      "id": "unique-id-1",
+      "_id": "unique-id-1",
       "label": "home",
       "street": "Jalan apa",
       "city": "Kota apa",
       "province": "Provinsi apa",
       "country": "Negara apa",
-      "postal_code": "Kode pos"
+      "postalCode": "Kode pos"
     },
     {
-      "id": "unique-id-2",
+      "_id": "unique-id-2",
       "label": "work",
       "street": "Jalan apa",
       "city": "Kota apa",
       "province": "Provinsi apa",
       "country": "Negara apa",
-      "postal_code": "Kode pos"
+      "postalCode": "Kode pos"
     }
   ]
 }
